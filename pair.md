@@ -1,5 +1,7 @@
 # Law of Large Numbers Investigation
 
+![100 Sample Mean Paths](images/100-paths.png)
+
 In this assignment we will do some investigation into the law of large numbers.  This will give us a nice chance to practice using scipy to generate sequences of random numbers from various distributions, and use matplotlib to display the results of our investigations.  These two tools will be with us for the rest of the course, so it's a good idea to spend a bit of time using them in a comfortable scenario.
 
 
