@@ -7,7 +7,7 @@ In this assignment we will do some investigation into the law of large numbers. 
 
 Recall that the law of large numbers is our first example of a mathematical link between a population and a sample from that population.  It (approximately) states that in large samples, the mean of the sample is close to the expected value of the population from which the sample was drawn.
 
-$$ \frac{X_1 + X_2 + \cdots + X_n}{n} \rightarrow E[X] \text{ as } n \rightarrow \infty $$
+![Law of Large Numbers Statements](images/law-of-large-numbers.gif)
 
 Let's play with this idea with different populations.
 
@@ -83,7 +83,7 @@ The miracle of the law of large numbers is that it applies to samples from *any*
 
 **A Reminder:** The **Poisson** distribution is used to model *counts* of events that happen at a fixed rate over a fixed time period.  So, for example, the number of times I observe a chunk of uranium emit a radioactive particle in one minute is Poisson distributed.  The **rate** is the only parameter of the Poisson distribution, and it is often notated as $\lambda$.  The probability mass function of the Poisson distribution is:
 
-$$ f_{\text{poisson}}(k) = \frac{\lambda^k e^\lambda}{k!} $$
+![Poisson Probability Mass Function](images/poisson-pmf.gif)
 
 1. Repeat all your above work on the coin flip distribution for the Poisson distribution.  You'll want to start with a function like this, which is analogous to our `flip_coin` function from before:
 
