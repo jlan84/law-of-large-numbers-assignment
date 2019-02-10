@@ -17,7 +17,7 @@ Let's play with this idea with different populations.
 
 ```python
 import numpy as np
-import scipy.stats as scs
+from scipy import stats
 
 %matplotlib inline
 import matplotlib.pyplot as plt
@@ -29,10 +29,10 @@ Let's validate that the law of large numbers holds for coin flips and dice, whic
 
 Since the results of coin flips are *not* numeric, we will need to make some convention to encode heads and tails as numeric values.  The traditional choice is `HEADS => 1, TAILS => 0`.
 
-We can then flip a fair coin ten times using `scipy.stats` (which we imported under the name `scs`):
+We can then flip a fair coin ten times using `scipy.stats` (which we imported under the name `stats`):
 
 ```python
-scs.binom.rvs(n=1, p=0.5, size=10)
+stats.binom(n=1, p=0.5).rvs(10)
 ```
 
 By a **fair** coin, we mean a coin with equal chance of landing heads or tails.  Below, we will refer to the probability of a coin landing heads as the **fairness** of the coin.
@@ -91,7 +91,7 @@ The miracle of the law of large numbers is that it applies to samples from *any*
 
 ```python
 def sample_poisson(sample_size, lam=1.0):
-    return scs.poisson.rvs(lam, size=sample_size)
+    return stats.poisson(lam).rvs(sample_size)
 ```
 
 ## Part 3 (Extra): A Mixture Distribution
