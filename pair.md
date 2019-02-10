@@ -94,7 +94,7 @@ def sample_poisson(sample_size, lam=1.0):
     return scs.poisson.rvs(lam, size=sample_size)
 ```
 
-## Part 3: A Mixture Distribution
+## Part 3 (Extra): A Mixture Distribution
 
 We will finish our experiments with the concept of a **mixture distribution**.
 
