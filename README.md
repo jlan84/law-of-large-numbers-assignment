@@ -6,4 +6,4 @@ In this assignment, you will be investigating how the law of large numbers works
   - Plotting the results of our investigations in matplotlib.
   - The concept of a *mixture distribution*.
 
-The assignment is in [pair.md](pair.md).
+The assignment (intended for pair programming) is in [assignment.md](assignment.md).
