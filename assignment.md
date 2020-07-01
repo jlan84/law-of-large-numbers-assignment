@@ -1,17 +1,22 @@
-# Law of Large Numbers Investigation
+# Law of Large Numbers
+
+## Introduction
 
 ![100 Sample Mean Paths](images/100-paths.png)
 
 In this assignment we will do some investigation into the law of large numbers.  This will give us a nice chance to practice using scipy to generate sequences of random numbers from various distributions, and use matplotlib to display the results of our investigations.  These two tools will be with us for the rest of the course, so it's a good idea to spend a bit of time using them in a comfortable scenario.
 
-
-## The Law of Large Numbers
+#### The Law of Large Numbers
 
 Recall that the law of large numbers is our first example of a mathematical link between a population and a sample from that population.  It (approximately) states that in large samples, the mean of the sample is close to the expected value of the population from which the sample was drawn.
 
 ![Law of Large Numbers Statements](images/law-of-large-numbers.gif)
 
 Let's play with this idea with different populations.
+
+## Basic
+
+### Part 1: Coin Flips
 
 1\. To begin, setup the following imports in your python file or notebook:
 
@@ -22,8 +27,6 @@ from scipy import stats
 %matplotlib inline
 import matplotlib.pyplot as plt
 ```
-
-## Part 1: Coin Flips
 
 Let's validate that the law of large numbers holds for coin flips and dice, which is the original context where [Gerolamo Cardano](https://en.wikipedia.org/wiki/Gerolamo_Cardano) discovered the law.
 
@@ -79,7 +82,8 @@ fairnesses = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
 
 For each value of fairness, flip a coin of that fairness 100 times, and then calculate the sample mean of the result (as we have been doing).  But now take an extra step: repeat this process 100 times, getting 100 sample means for each value of the coin fairness.  Take the variance of *these* sample means.  Plot the results vs the fairness of the coin.
 
-## Part 2: Poisson Draws
+## Advanced
+### Part 2: Poisson Draws
 
 The miracle of the law of large numbers is that it applies to samples from *any* population.  Let's try seeing how things work when drawing from a *Poisson* distribution.
 
@@ -94,7 +98,8 @@ def sample_poisson(sample_size, lam=1.0):
     return stats.poisson(lam).rvs(sample_size)
 ```
 
-## Part 3 (Extra): A Mixture Distribution
+## Extra Credit
+### Part 3: A Mixture Distribution
 
 We will finish our experiments with the concept of a **mixture distribution**.
 
