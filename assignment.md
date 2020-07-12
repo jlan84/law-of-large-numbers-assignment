@@ -49,7 +49,11 @@ def flip_coin(n_flips, p=0.5):
 
 2\. Flip a fair coin 1000 times with your function.  What will the sample average of these flips be and why?  Use `np.mean` to check.
 
+**the average will be 0.5 or the expected value of the population which is 0.5**
+
 3\. Flip an **unfair** coin 1000 times.  What will the sample average be now?  How would you expect the answer to change depending on how extreme the unfairness is?  Use `np.mean` to check your result.
+**The mean of the sample will trend towards the probability as the sample size grows**
+
 
 4\. Now let's see how this all depends on the size of the sample.  Create a list with a range of sample sizes, starting at 10, and counting up to 1000 in increments of 10 (`list(range(...))` can be used for this).  Now, for each of these sample sizes, repeat the experiments above.  How does the accuracy of the results depend on the sample size?
 
